@@ -9,9 +9,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\PostController::class, 'index'])->name('home');
-Route::get('post/create', [App\Http\Controllers\PostController::class, 'create']);
-Route::post('post', [App\Http\Controllers\PostController::class, 'store']);
-Route::get('post/{post}/edit', [App\Http\Controllers\PostController::class, 'edit']);
-Route::get('post/{post}', [App\Http\Controllers\PostController::class, 'show']);
-Route::put('post/{post}', [App\Http\Controllers\PostController::class, 'update']);
-Route::delete('post/{post}', [App\Http\Controllers\PostController::class, 'destroy']);
+Route::get('posts/create', [App\Http\Controllers\PostController::class, 'create']);
+Route::post('posts', [App\Http\Controllers\PostController::class, 'store']);
+Route::get('posts/{posts}/edit', [App\Http\Controllers\PostController::class, 'edit']);
+Route::get('posts/{posts}', [App\Http\Controllers\PostController::class, 'show']);
+Route::put('posts/{posts}', [App\Http\Controllers\PostController::class, 'update']);
+Route::delete('posts/{posts}', [App\Http\Controllers\PostController::class, 'destroy']);
